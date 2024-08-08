@@ -5,14 +5,13 @@
         2 - COMANDOS BREAK, CONTINUE, GOTO
         3 - BIBLIOTECA string.h
 
-// Tipos da linguegem C // 
+        // Tipos da linguegem C // 
         char 	letras e símbolos:   'a',  'b', 'H', '^', '*','1','0'
         short int 	de -32767 até 32767 (apenas números inteiros)
         int numero inteiros
         float 	de -3.4 x 1038 até +3.4 x 10+38com até 6 dígitos de precisão
         double 	de -1.7 x 10308 até +1.7 x 10+308com até 10 dígitos de precisão
 
-///////////////////////////////////////////////////////////////////////////////
 
 // Esqueleto basico de um programa em C // 
         #include <stdio.h>
@@ -39,7 +38,6 @@
         printf("Dentro da função minhaFuncao.\n");
         }
 
-///////////////////////////////////////////////////////////////////////////////
 
 // Sintaxe do Operador Ternário //
 
@@ -56,7 +54,6 @@
         return 0;
         }
 
-///////////////////////////////////////////////////////////////////////////////
 
 1 - Declarando constantes:
     
@@ -93,3 +90,4 @@
     Ponteiros
 
     %p: Endereço de ponteiro.
+    
