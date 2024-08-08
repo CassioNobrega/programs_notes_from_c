@@ -1,4 +1,5 @@
 /* Esqueleto basico de um programa em C */ 
+        
         #include <stdio.h>
 
         // Protótipo de função
