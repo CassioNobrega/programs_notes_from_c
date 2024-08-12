@@ -8,7 +8,7 @@ int main ()
 {
         char 
         *buffer[BUFFER_SIZE],
-        *filename = "README.md";
+        *filename = "../README.md";
 
         FILE *file_1 = fopen(filename, "r");
 
