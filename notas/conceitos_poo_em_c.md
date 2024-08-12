@@ -1,9 +1,13 @@
 1. Interface
 
-        Conceito: Em C, não há suporte nativo para interfaces como em linguagens orientadas a objetos. No entanto, você pode simular interfaces usando ponteiros para funções em structs. A ideia é definir uma estrutura que contenha os ponteiros para as funções que devem ser implementadas.
+        Conceito: Em C, não há suporte nativo para interfaces como em linguagens 
+        orientadas a objetos. No entanto, você pode simular interfaces usando 
+        ponteiros para funções em structs. A ideia é definir uma estrutura que 
+        contenha os ponteiros para as funções que devem ser implementadas.
 
         Exemplo:
-        Vamos criar uma "interface" para uma forma geométrica (Shape) que tem um método draw.
+        Vamos criar uma "interface" para uma forma geométrica (Shape) que tem 
+        um método draw.
 
         c
 
@@ -39,16 +43,23 @@
 
         Explicação:
 
-        Shape: Define um ponteiro para a função draw, que será implementada pelas estruturas que representam formas específicas (neste caso, um círculo).
+        Shape: Define um ponteiro para a função draw, que será implementada 
+        pelas estruturas que representam formas específicas (neste caso, um 
+        círculo).
+
         Circle: Implementa a função draw específica para desenhar um círculo.
-        Polimorfismo: Você pode chamar draw para qualquer estrutura que siga essa interface, sem precisar conhecer sua implementação exata.
+        Polimorfismo: Você pode chamar draw para qualquer estrutura que siga 
+        essa interface, sem precisar conhecer sua implementação exata.
 
 2. Encapsulamento
 
-        Conceito: Encapsulamento envolve esconder os detalhes de implementação de uma estrutura de dados ou função, expondo apenas uma interface pública para interagir com ela.
+        Conceito: Encapsulamento envolve esconder os detalhes de implementação
+        de uma estrutura de dados ou função, expondo apenas uma interface pú-
+        blica para interagir com ela.
 
         Exemplo:
-        Vamos encapsular os detalhes internos de uma estrutura MyClass, expondo apenas funções para acessar e modificar seus dados.
+        Vamos encapsular os detalhes internos de uma estrutura MyClass, expon-
+        do apenas funções para acessar e modificar seus dados.
 
         c
 
@@ -89,15 +100,21 @@
 
         Explicação:
 
-        Encapsulamento: A estrutura MyClass tem um membro private_data que é acessado e modificado apenas através de funções específicas (set_data e get_data).
-        Controle: Isso permite controlar como os dados internos são manipulados, prevenindo acessos diretos que poderiam levar a erros.
+        Encapsulamento: A estrutura MyClass tem um membro private_data que é 
+        acessado e modificado apenas através de funções específicas 
+        (set_data e get_data).
+        
+        Controle: Isso permite controlar como os dados internos são manipula-
+        dos, prevenindo acessos diretos que poderiam levar a erros.
 
 3. Abstração
 
-        Conceito: Abstração é o processo de ocultar os detalhes complexos de uma operação, expondo apenas uma interface simples e intuitiva.
+        Conceito: Abstração é o processo de ocultar os detalhes complexos de 
+        uma operação, expondo apenas uma interface simples e intuitiva.
 
         Exemplo:
-        Vamos criar uma abstração para a manipulação de uma lista ligada (linked list).
+        Vamos criar uma abstração para a manipulação de uma lista ligada 
+        (linked list).
 
         c
 
@@ -149,15 +166,23 @@
 
         Explicação:
 
-        Abstração: A estrutura LinkedList e suas funções (add_node, print_list) abstraem os detalhes de como a lista ligada é implementada, permitindo que o usuário da lista interaja com ela de forma simples e intuitiva.
-        Ocultação de Complexidade: O usuário da lista não precisa saber como os nós são alocados ou ligados, apenas como adicionar elementos e imprimir a lista.
+        Abstração: A estrutura LinkedList e suas funções (add_node, print_list)
+         abstraem os detalhes de como a lista ligada é implementada, permitin-
+         do que o usuário da lista interaja com ela de forma simples e intui-
+         tiva.
+        Ocultação de Complexidade: O usuário da lista não precisa saber como 
+        os nós são alocados ou ligados, apenas como adicionar elementos e im-
+        primir a lista.
 
 4. Hereditariedade e Polimorfismo
 
-        Conceito: Em C, a herança e o polimorfismo podem ser simulados usando ponteiros para funções e estruturas. Isso permite que diferentes "subclasses" compartilhem uma interface comum.
+        Conceito: Em C, a herança e o polimorfismo podem ser simulados usando 
+        ponteiros para funções e estruturas. Isso permite que diferentes 
+        "subclasses" compartilhem uma interface comum.
 
         Exemplo:
-        Vamos criar uma simulação simples de herança e polimorfismo usando uma "classe base" Animal e duas "subclasses" Dog e Cat.
+        Vamos criar uma simulação simples de herança e polimorfismo usando 
+        uma "classe base" Animal e duas "subclasses" Dog e Cat.
 
         c
 
@@ -221,17 +246,26 @@
 
         Explicação:
 
-        Hereditariedade: Dog e Cat podem ser vistas como "subclasses" de Animal, cada uma implementando seu próprio comportamento de speak.
-        Polimorfismo: A função animal_speak pode chamar speak em qualquer Animal, independentemente de ser um Dog ou Cat, permitindo que diferentes tipos de animais sejam tratados de forma uniforme.
+        Hereditariedade: Dog e Cat podem ser vistas como "subclasses" de 
+        Animal, cada uma implementando seu próprio comportamento de speak.
+        Polimorfismo: A função animal_speak pode chamar speak em qualquer 
+        Animal, independentemente de ser um Dog ou Cat, permitindo que 
+        diferentes tipos de animais sejam tratados de forma uniforme.
 
 5. Coesão e Acoplamento
 
         Conceito:
-                Coesão: Refere-se ao quão bem os componentes dentro de um módulo estão relacionados. Um módulo altamente coeso realiza uma única tarefa ou responsabilidade.
-                Acoplamento: Refere-se ao grau de dependência entre módulos. Módulos com baixo acoplamento dependem pouco um do outro, o que facilita a manutenção e a evolução do sistema.
+                Coesão: Refere-se ao quão bem os componentes dentro de um 
+                módulo estão relacionados. Um módulo altamente coeso realiza 
+                uma única tarefa ou responsabilidade.
+
+                Acoplamento: Refere-se ao grau de dependência entre módulos. 
+                Módulos com baixo acoplamento dependem pouco um do outro, o
+                que facilita a manutenção e a evolução do sistema.
 
         Exemplo:
-        Vamos comparar dois exemplos: um com baixa coesão e alto acoplamento, e outro com alta coesão e baixo acoplamento.
+        Vamos comparar dois exemplos: um com baixa coesão e alto acoplamento,
+         e outro com alta coesão e baixo acoplamento.
 
         Baixa Coesão e Alto Acoplamento:
 
@@ -273,3 +307,4 @@
                 display_data(result);  // Função de exibição
                 return 0;
         }
+        
